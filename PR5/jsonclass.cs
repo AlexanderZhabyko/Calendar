@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System.IO;
 
 namespace PR5
@@ -7,16 +7,17 @@ namespace PR5
     {
         private static string rootFolder = Path.GetFullPath(@"..\..\..\");
 
-        public static void JsonSer<T>(T type, string fileName)
+        public static void JsonSer<T>(T type)
         {
             string JsonWrite = JsonConvert.SerializeObject(type);
-            File.WriteAllText(rootFolder + "\\" + fileName, JsonWrite);
+            File.WriteAllText(rootFolder + "\\save.json", JsonWrite);
         }
-        public static T JsonDeser<T>(string fileName)
+        public static T JsonDeser<T>()
         {
-            string JsonRead = File.ReadAllText(rootFolder + "\\" + fileName);
+            string JsonRead = File.ReadAllText(rootFolder + "\\save.json");
             T Mytype = JsonConvert.DeserializeObject<T>(JsonRead);
             return Mytype;
         }
     }
 }
+
