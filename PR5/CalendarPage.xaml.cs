@@ -49,7 +49,7 @@ namespace PR5
         class userselect
         {
             public DateTime date { get; set; }
-            public List<bool> isselected { get; set; }
+            public List<bool> isselected { get; set;}
         }
     }
 }
