@@ -46,5 +46,10 @@ namespace PR5
             var button = (Button)sender;
             MainWindow.Instance.MyFrame.Content = new DayPage(button.Name);
         }
+        class userselect
+        {
+            public DateTime date { get; set; }
+            public List<bool> isselected { get; set; }
+        }
     }
 }
