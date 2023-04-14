@@ -1,0 +1,28 @@
+﻿<Page x:Class="PR5.CalendarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PR5"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="550"
+      Title="CalendarPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="prevbtn" Content="Button"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Click="prevclk"/>
+        <Button x:Name="nextbtn" Grid.Column="6" Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Click="nextclk"/>
+        <DatePicker x:Name="mydatepicker" HorizontalAlignment="Stretch" VerticalAlignment="Center"  FirstDayOfWeek="Monday" Grid.Column="1" SelectedDateFormat="Long"/>
+        <WrapPanel x:Name="DayPanel" Grid.Row="1" Grid.ColumnSpan="7"  Grid.RowSpan="6" >
+
+        </WrapPanel>
+    </Grid>
+</Page>
