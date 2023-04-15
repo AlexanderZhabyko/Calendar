@@ -41,6 +41,11 @@ namespace PR5
             mydatepicker.SelectedDate = ((DateTime)mydatepicker.SelectedDate).AddMonths(1);
             update();
         }
+        private void mydatepicker_CalendarClosed(object sender, RoutedEventArgs e)
+        {
+            mydatepicker.SelectedDate = ((DateTime)mydatepicker.SelectedDate);
+            update();
+        }
         private void dayclk(object sender, RoutedEventArgs e)
         {
             var button = (Button)sender;
